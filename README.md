@@ -507,8 +507,57 @@ This computational workflow provides a systematic approach for prioritizing pote
 
 
 
+
 ---
 
+
+---
+
+## Limitations and Future Work
+
+### Limitations
+
+- The machine learning models were developed using a limited set of molecular descriptors and ADME-related features.
+- The SVC model achieved an accuracy of **69.4%**, indicating that the predictions should be interpreted as computational prioritization rather than definitive activity predictions.
+- Molecular docking scores are computational estimates and do not experimentally confirm binding affinity or inhibitory activity.
+- Docking results depend on the selected protein structure, docking parameters, and scoring function.
+- The predicted compounds require experimental validation to confirm their activity against ITK.
+
+### Future Work
+
+Future studies could focus on:
+
+- Experimental validation of the prioritized compounds.
+- Biochemical assays to confirm ITK inhibitory activity.
+- Molecular dynamics simulations to further investigate protein–ligand stability.
+- Evaluation of compound selectivity against related kinases.
+- Exploring additional molecular descriptors and molecular fingerprints.
+- Testing additional machine learning and deep learning approaches.
+- Further optimization of promising natural-product candidates.
+
+
+
+---
+
+
+---
+
+## Conclusion
+
+This project presents an integrated computational workflow for the identification of potential ITK inhibitors from natural products.
+
+A ChEMBL-based dataset of known ITK compounds was used to develop and compare four machine learning classification models. Among the evaluated models, the **Support Vector Classifier (SVC)** achieved the highest test accuracy of **69.4%** and was selected for virtual screening.
+
+The trained SVC model was applied to a natural-product screening dataset, followed by molecular filtering, ranking, and selection of the top 50 compounds. These candidates were subsequently prepared for molecular docking against the ITK crystal structure (**PDB ID: 4HCT**).
+
+The docking analysis provided a structural assessment of the ML-prioritized compounds and enabled comparison with the reference ligand and selected training compounds.
+
+Overall, the study demonstrates the use of **machine learning, molecular descriptors, ADME properties, virtual screening, and molecular docking** as complementary computational approaches for prioritizing potential ITK inhibitors.
+
+The identified compounds represent computationally prioritized candidates that require further experimental investigation and validation.
+
+
+----
 
 ## Tools & Technologies
 
@@ -559,47 +608,4 @@ ITK-Inhibitor-Discovery-ML-Docking/
 │
 └── README.md
 
-
-
----
-
-
-
-## Limitations and Future Work
-
-### Limitations
-
-- The machine learning models were developed using a limited set of molecular descriptors and ADME-related features.
-- The SVC model achieved an accuracy of **69.4%**, indicating that the predictions should be interpreted as computational prioritization rather than definitive activity predictions.
-- Molecular docking scores are computational estimates and do not experimentally confirm binding affinity or inhibitory activity.
-- Docking results depend on the selected protein structure, docking parameters, and scoring function.
-- The predicted compounds require experimental validation to confirm their activity against ITK.
-
-### Future Work
-
-Future studies could focus on:
-
-- Experimental validation of the prioritized compounds.
-- Biochemical assays to confirm ITK inhibitory activity.
-- Molecular dynamics simulations to further investigate protein–ligand stability.
-- Evaluation of compound selectivity against related kinases.
-- Exploring additional molecular descriptors and molecular fingerprints.
-- Testing additional machine learning and deep learning approaches.
-- Further optimization of promising natural-product candidates.
-
-
----
-
-## Conclusion
-
-This project presents an integrated computational workflow for the identification of potential ITK inhibitors from natural products.
-
-A ChEMBL-based dataset of known ITK compounds was used to develop and compare four machine learning classification models. Among the evaluated models, the **Support Vector Classifier (SVC)** achieved the highest test accuracy of **69.4%** and was selected for virtual screening.
-
-The trained SVC model was applied to a natural-product screening dataset, followed by molecular filtering, ranking, and selection of the top 50 compounds. These candidates were subsequently prepared for molecular docking against the ITK crystal structure (**PDB ID: 4HCT**).
-
-The docking analysis provided a structural assessment of the ML-prioritized compounds and enabled comparison with the reference ligand and selected training compounds.
-
-Overall, the study demonstrates the use of **machine learning, molecular descriptors, ADME properties, virtual screening, and molecular docking** as complementary computational approaches for prioritizing potential ITK inhibitors.
-
-The identified compounds represent computationally prioritized candidates that require further experimental investigation and validation.
+gation and validation.
